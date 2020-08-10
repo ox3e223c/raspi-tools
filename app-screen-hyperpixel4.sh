@@ -8,8 +8,9 @@ TITLE="Fenix's Toolkit"
 MENU="Choose one of the following options:"
 
 OPTIONS=(
-1 "安裝 Hyperpixel4 HDMI 自動切換"
-2 "移除自動切換"
+1 "安裝 HyperPixel 4.0 Drivers"
+2 "安裝 Hyperpixel4 HDMI 自動切換功能"
+3 "移除自動切換"
 )
 
 CHOICE=$(dialog --clear \
@@ -23,6 +24,10 @@ CHOICE=$(dialog --clear \
 clear
 case $CHOICE in
   1)
+    echo "Install HyperPixel 4.0 Drivers"
+    curl -sSL https://get.pimoroni.com/hyperpixel4 | bash
+    ;;
+  2)
     echo "備份檔案"
     #sudo cp /etc/rc.local ./screen/hyperpixel4/backup/etc/rc.local
     #sudo cp /boot/config.txt ./screen/hyperpixel4/backup/boot/config.txt
@@ -35,9 +40,8 @@ case $CHOICE in
 
     #sudo cp ./screen/hyperpixel4/etc/rc.local /etc/rc.local
     ;;
-  2)
+  3)
     echo "還原安裝"
-
     ;;
 esac
 
