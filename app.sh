@@ -7,7 +7,10 @@ BACKTITLE="Fenix's Raspberry Pi Toolkit version 0.0.1"
 TITLE="Fenix's Toolkit"
 MENU="Choose one of the following options:"
 
-OPTIONS=(1 "Screen" 2 "Vim" 3 "exit")
+OPTIONS=(
+1 "Screen"
+2 "Vim"
+)
 
 CHOICE=$(dialog --clear \
   --backtitle "$BACKTITLE" \
@@ -20,14 +23,10 @@ CHOICE=$(dialog --clear \
 clear
 case $CHOICE in
   1)
-    echo "You chose Option 1"
     bash ./app-screen.sh
     ;;
   2)
-    echo "You chose Option 2"
-    ;;
-  3)
-    echo "You chose Option 3"
+    bash ./app-vim.sh
     ;;
 esac
 
