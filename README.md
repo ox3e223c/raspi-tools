@@ -1,21 +1,24 @@
-# raspi-tools
-
-# setting wifi
-# change hostname
-# open ssh
-
-# add user
+# ox3e223c's Toolkit
+## Before you get started
+```bash
+sudo raspi-config
 ```
+1. setting wifi
+2. change hostname
+3. open ssh
+
+## Add new user and delete default pi user
+```bash
 sudo add user lex
 sudo add user lex sudo 
+sudo userdel pi
 ```
-
-# install mosh
-# install tmux
-
-# install vim
-# install vimrc
-# install vim plugin
+## Install softwave
+1. install mosh
+2. install tmux
+3. install vim
+4. install vimrc
+5. install vim plugin
 ```
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim

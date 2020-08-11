@@ -12,6 +12,7 @@ OPTIONS=(
 2 "Install Vim Plugin"
 3 "Copy Vimrc"
 4 "Creating swap folder"
+5 "all Install"
 )
 
 CHOICE=$(dialog --clear \
@@ -37,6 +38,16 @@ case $CHOICE in
     cp ./vim/.vimrc ~
     ;;
   4)
+    # creating swap folder
+    mkdir ~/.vim/swap
+    ;;
+  5)
+    # install vim
+    sudo apt-get install vim
+    # install vim plugin
+    curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    # copy vimrc
+    cp ./vim/.vimrc ~
     # creating swap folder
     mkdir ~/.vim/swap
     ;;
