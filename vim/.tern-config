@@ -1,0 +1,9 @@
+{
+  "libs": [
+    "jquery"
+  ],
+  "plugins": {
+    "node": {},
+    "es_modules":{}
+  }
+}
