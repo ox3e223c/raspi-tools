@@ -26,7 +26,7 @@ clear
 case $CHOICE in
   1)
     # install vim
-    sudo apt-install vim
+    sudo apt-get install vim
     ;;
   2)
     # install vim plugin
