@@ -1,11 +1,7 @@
 #!/bin/bash
 
-HEIGHT=20
-WIDTH=60
-CHOICE_HEIGHT=10
-BACKTITLE="Fenix's Raspberry Pi Toolkit version 0.0.1"
-TITLE="Fenix's Toolkit"
-MENU="Choose one of the following options:"
+# include global setting
+source ./app-global.sh
 
 OPTIONS=(
 1 "安裝 HyperPixel 4.0 Drivers"
@@ -28,20 +24,19 @@ case $CHOICE in
     curl -sSL https://get.pimoroni.com/hyperpixel4 | bash
     ;;
   2)
-    echo "備份檔案"
+    #備份檔案
     #sudo cp /etc/rc.local ./screen/hyperpixel4/backup/etc/rc.local
     #sudo cp /boot/config.txt ./screen/hyperpixel4/backup/boot/config.txt
-    echo "安裝功能"
 
+    #安裝功能
     #sudo cp /boot/config.txt /boot/hyper-config.txt
-
     #sudo cp /boot/config.txt /boot/hdmi-config.txt
     #sudo cp ./screen/hyperpixel4/boot/hdmi-config.txt /boot/hdmi-config.txt
 
     #sudo cp ./screen/hyperpixel4/etc/rc.local /etc/rc.local
     ;;
   3)
-    echo "還原安裝"
+    #還原安裝
     ;;
 esac
 

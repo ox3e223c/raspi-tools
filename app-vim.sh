@@ -1,11 +1,7 @@
 #!/bin/bash
 
-HEIGHT=20
-WIDTH=40
-CHOICE_HEIGHT=10
-BACKTITLE="Fenix's Raspberry Pi Toolkit version 0.0.1"
-TITLE="Fenix's Toolkit"
-MENU="Choose one of the following options:"
+# include global setting
+source ./app-global.sh
 
 OPTIONS=(
 1 "Install Vim"

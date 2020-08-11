@@ -1,15 +1,11 @@
 #!/bin/bash
 
-HEIGHT=15
-WIDTH=40
-CHOICE_HEIGHT=4
-BACKTITLE="Fenix's Raspberry Pi Toolkit version 0.0.1"
-TITLE="Fenix's Toolkit"
-MENU="Choose one of the following options:"
+# include global setting
+source ./app-global.sh
 
 OPTIONS=(
 1 "Official Raspberry Pi 7″ Touchscreen Display"
-2 "Hyperpixel 4"
+2 "Pimoroni Hyperpixel 4"
 3 "Waveshare LCD4C"
 )
 
