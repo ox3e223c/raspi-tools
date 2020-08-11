@@ -1,8 +1,8 @@
 #!/bin/bash
 
-HEIGHT=15
+HEIGHT=20
 WIDTH=40
-CHOICE_HEIGHT=4
+CHOICE_HEIGHT=10
 BACKTITLE="Fenix's Raspberry Pi Toolkit version 0.0.1"
 TITLE="Fenix's Toolkit"
 MENU="Choose one of the following options:"
