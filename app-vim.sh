@@ -33,12 +33,12 @@ case $CHOICE in
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     ;;
   3)
-    # creating swap folder
-    mkdir ~/.vim/swap
-    ;;
-  4)
     # copy vimrc
     cp ./vim/.vimrc ~
+    ;;
+  4)
+    # creating swap folder
+    mkdir ~/.vim/swap
     ;;
 esac
 
