@@ -1,4 +1,4 @@
-#p!/bin/bash
+#!/bin/bash
 
 HEIGHT=15
 WIDTH=40
