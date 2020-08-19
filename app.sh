@@ -3,6 +3,13 @@
 # include global setting
 source ./app-global.sh
 
+if ! command -v dialog &> /dev/null
+then
+    echo "dialog could not be found"
+    sudo apt-get install dialog
+    exit
+fi
+
 OPTIONS=(
 1 "Screen"
 2 "Vim"

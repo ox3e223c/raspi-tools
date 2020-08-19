@@ -7,9 +7,9 @@ OPTIONS=(
 1 "安裝 HyperPixel 4.0 Drivers"
 2 "安裝 Hyperpixel4 HDMI 自動切換功能"
 3 "移除 HDMI 自動切換"
-4 "安裝螢幕開關鍵"
-5 "0"
-6 "100"
+4 "安裝螢幕開關鍵 (未完成)"
+5 "關閉螢幕背光 0"
+6 "開啟螢幕背光 100"
 )
 
 CHOICE=$(dialog --clear \
@@ -27,6 +27,7 @@ case $CHOICE in
     curl -sSL https://get.pimoroni.com/hyperpixel4 | bash
     ;;
   2)
+    echo "Install HyperPixel 4 HDMI auto switch"
     #備份檔案
     sudo cp /etc/rc.local ./screen/hyperpixel4/backup/etc/rc.local
     sudo cp /boot/config.txt ./screen/hyperpixel4/backup/boot/config.txt
@@ -34,8 +35,7 @@ case $CHOICE in
     #安裝功能
     sudo cp /boot/config.txt /boot/hyper-config.txt
     sudo cp /boot/config.txt /boot/hdmi-config.txt
-
-    sudo cp ./screen/hyperpixel4/boot/hdmi-config.txt /boot/hdmi-config.txt
+    #sudo cp ./screen/hyperpixel4/boot/hdmi-config.txt /boot/hdmi-config.txt
     sudo cp ./screen/hyperpixel4/etc/rc.local /etc/rc.local
     ;;
   3)
