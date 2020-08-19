@@ -3,17 +3,10 @@
 # include global setting
 source ./app-global.sh
 
-if ! command -v dialog &> /dev/null
-then
-    echo "dialog could not be found"
-    sudo apt-get install dialog
-    exit
-fi
-
 OPTIONS=(
-0 "Basic install"
-1 "Setup Raspberry Pi Screen"
-2 "Vim"
+1 "Install oh my bash"
+2 "Install Powerline fonts"
+9 "上一頁"
 )
 
 CHOICE=$(dialog --clear \
@@ -26,14 +19,17 @@ CHOICE=$(dialog --clear \
 
 clear
 case $CHOICE in
-  0)
+  1)
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
     bash ./app-basic.sh
     ;;
-  1)
-    bash ./app-screen.sh
-    ;;
   2)
-    bash ./app-vim.sh
+    sudo apt-get install fonts-powerline
+    bash ./app-basic.sh
+    ;;
+  9)
+    bash ./app.sh
     ;;
 esac
+
 

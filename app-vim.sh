@@ -24,18 +24,23 @@ case $CHOICE in
   1)
     # install vim
     sudo apt-get install vim
+    bash ./app-vim.sh
     ;;
   2)
     # install vim plugin
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    bash ./app-vim.sh
     ;;
   3)
     # copy vimrc
     cp ./vim/.vimrc ~
+    cp ./vim/.tmux.conf ~
+    bash ./app-vim.sh
     ;;
   4)
     # creating swap folder
     mkdir ~/.vim/swap
+    bash ./app-vim.sh
     ;;
   5)
     # install vim
@@ -46,6 +51,7 @@ case $CHOICE in
     cp ./vim/.vimrc ~
     # creating swap folder
     mkdir ~/.vim/swap
+    bash ./app-vim.sh
     ;;
 esac
 
