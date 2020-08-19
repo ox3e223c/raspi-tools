@@ -34,8 +34,8 @@ case $CHOICE in
 
     #安裝功能
     sudo cp /boot/config.txt /boot/hyper-config.txt
-    sudo cp /boot/config.txt /boot/hdmi-config.txt
-    #sudo cp ./screen/hyperpixel4/boot/hdmi-config.txt /boot/hdmi-config.txt
+    #sudo cp /boot/config.txt /boot/hdmi-config.txt
+    sudo cp ./screen/hyperpixel4/boot/hdmi-config.txt /boot/hdmi-config.txt
     sudo cp ./screen/hyperpixel4/etc/rc.local /etc/rc.local
     ;;
   3)
