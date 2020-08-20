@@ -34,7 +34,6 @@ case $CHOICE in
   3)
     # copy vimrc
     cp ./vim/.vimrc ~
-    cp ./vim/.tmux.conf ~
     bash ./app-vim.sh
     ;;
   4)
