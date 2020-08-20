@@ -3,18 +3,10 @@
 # include global setting
 source ./app-global.sh
 
-if ! command -v dialog &> /dev/null
-then
-    echo "dialog could not be found"
-    sudo apt-get install dialog
-    exit
-fi
-
 OPTIONS=(
-0 "Basic install"
-1 "Setup Raspberry Pi Screen"
-2 "Vim"
-3 "Applications"
+0 "Install RetroPie"
+1 "Install OctoPrint"
+2 "上一頁"
 )
 
 CHOICE=$(dialog --clear \
@@ -28,16 +20,13 @@ CHOICE=$(dialog --clear \
 clear
 case $CHOICE in
   0)
-    bash ./app-basic.sh
+    bash ./app-apps-retropie.sh
     ;;
   1)
-    bash ./app-screen.sh
+    bash ./app-apps-octoprint.sh
     ;;
   2)
-    bash ./app-vim.sh
-    ;;
-  3)
-    bash ./app-apps.sh
+    bash ./app.sh
     ;;
 esac
 
