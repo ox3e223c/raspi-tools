@@ -9,7 +9,7 @@ OPTIONS=(
 3 "Install mosh"
 4 "Install tmux"
 5 "Install vim"
-9 "上一頁"
+E "上一頁"
 )
 
 CHOICE=$(dialog --clear \
@@ -42,9 +42,8 @@ case $CHOICE in
   5)
     bash ./app-vim.sh
     ;;
-  9)
+  E)
     bash ./app.sh
     ;;
 esac
-
 

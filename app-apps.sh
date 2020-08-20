@@ -4,9 +4,9 @@
 source ./app-global.sh
 
 OPTIONS=(
-0 "Install RetroPie"
-1 "Install OctoPrint"
-2 "上一頁"
+R "Install RetroPie"
+O "Install OctoPrint"
+E "上一頁"
 )
 
 CHOICE=$(dialog --clear \
@@ -19,13 +19,13 @@ CHOICE=$(dialog --clear \
 
 clear
 case $CHOICE in
-  0)
+  R)
     bash ./app-apps-retropie.sh
     ;;
-  1)
+  O)
     bash ./app-apps-octoprint.sh
     ;;
-  2)
+  E)
     bash ./app.sh
     ;;
 esac

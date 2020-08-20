@@ -4,9 +4,10 @@
 source ./app-global.sh
 
 OPTIONS=(
-1 "Official Raspberry Pi 7″ Touchscreen Display"
-2 "Pimoroni Hyperpixel 4"
-3 "Waveshare LCD4C"
+O "Official Raspberry Pi 7″ Touchscreen Display"
+P "Pimoroni Hyperpixel 4"
+W "Waveshare LCD4C"
+E "上一頁"
 )
 
 CHOICE=$(dialog --clear \
@@ -19,15 +20,17 @@ CHOICE=$(dialog --clear \
 
 clear
 case $CHOICE in
-  1)
+  O)
     bash ./app-screen-official-7inch.sh
     ;;
-  2)
+  P)
     bash ./app-screen-hyperpixel4.sh
     ;;
-  3)
+  W)
     bash ./app-screen-waveshare-lcd4c.sh
     ;;
+  E)
+    bash ./app.sh
+    ;;
 esac
-
 

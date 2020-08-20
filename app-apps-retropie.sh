@@ -9,7 +9,7 @@ OPTIONS=(
 3 "3. Verify Locale Settings"
 4 "4. Install the needed packages for the RetroPie"
 5 "5. Install RetroPie"
-9 "上一頁"
+E "上一頁"
 )
 
 CHOICE=$(dialog --clear \
@@ -24,7 +24,7 @@ clear
 case $CHOICE in
   1)
     df -h
-    read -n 1 -s -r -p "Press any key to continue"
+    pressAnyKey
     bash ./app-apps-retropie.sh
     ;;
   2)
@@ -33,12 +33,12 @@ case $CHOICE in
     ;;
   3)
     locale
-    read -n 1 -s -r -p "Press any key to continue"
+    pressAnyKey
     bash ./app-apps-retropie.sh
     ;;
   4)
     sudo apt install git lsb-release
-    read -n 1 -s -r -p "Press any key to continue"
+    pressAnyKey
     bash ./app-apps-retropie.sh
     ;;
   5)
@@ -47,10 +47,10 @@ case $CHOICE in
     cd RetroPie-Setup
     chmod +x retropie_setup.sh
     sudo ./retropie_setup.sh
-    read -n 1 -s -r -p "Press any key to continue"
+    pressAnyKey
     bash ./app-apps-retropie.sh
     ;;
-  9)
+  E)
     bash ./app-apps.sh
     ;;
 esac

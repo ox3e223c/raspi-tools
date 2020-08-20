@@ -8,6 +8,7 @@ OPTIONS=(
 2 "Brightness to 128(half)"
 3 "Brightness to 100"
 4 "Brightness to 0"
+E "上一頁"
 )
 
 CHOICE=$(dialog --clear \
@@ -35,6 +36,9 @@ case $CHOICE in
   4)
     sudo sh -c 'echo "0" > /sys/class/backlight/rpi_backlight/brightness'
     bash ./app-screen-official-7inch.sh
+    ;;
+  E)
+    bash ./app-screen.sh
     ;;
 esac
 

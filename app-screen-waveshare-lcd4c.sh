@@ -6,6 +6,7 @@ source ./app-global.sh
 OPTIONS=(
 1 "Install Waveshare LCD4C Drivers"
 2 "Install Waveshare LCD4C ON/OFF switch hotkey"
+E "上一頁"
 )
 
 CHOICE=$(dialog --clear \
@@ -28,6 +29,8 @@ case $CHOICE in
     bind -x '"\e[24~":"/home/lex/Projects/toolkit/screen/waveshare-lcd4c/off.sh"'
     bind -x '"\e[23~":"/home/lex/Projects/toolkit/screen/waveshare-lcd4c/on.sh"'
     ;;
+  E)
+    bash ./app-screen.sh
+    ;;
 esac
-
 

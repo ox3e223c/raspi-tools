@@ -10,6 +10,7 @@ OPTIONS=(
 4 "安裝螢幕開關鍵 (未完成)"
 5 "關閉螢幕背光 0"
 6 "開啟螢幕背光 100"
+E "上一頁"
 )
 
 CHOICE=$(dialog --clear \
@@ -56,6 +57,8 @@ case $CHOICE in
     gpio -g write 19 100 
     bash ./app-screen-hyperpixel4.sh
     ;;
+  E)
+    bash ./app-screen.sh
+    ;;
 esac
-
 

@@ -11,10 +11,10 @@ then
 fi
 
 OPTIONS=(
-0 "Basic install"
-1 "Setup Raspberry Pi Screen"
-2 "Vim"
-3 "Applications"
+B "Basic install"
+A "Applications"
+S "Setup Raspberry Pi Screen"
+E "Exit"
 )
 
 CHOICE=$(dialog --clear \
@@ -27,17 +27,17 @@ CHOICE=$(dialog --clear \
 
 clear
 case $CHOICE in
-  0)
+  B)
     bash ./app-basic.sh
     ;;
-  1)
+  A)
+    bash ./app-apps.sh
+    ;;
+  S)
     bash ./app-screen.sh
     ;;
-  2)
-    bash ./app-vim.sh
-    ;;
-  3)
-    bash ./app-apps.sh
+  E)
+    #donothing
     ;;
 esac
 
