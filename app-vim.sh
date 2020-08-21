@@ -9,6 +9,7 @@ OPTIONS=(
 3 "Copy Vimrc"
 4 "Creating swap folder"
 5 "all Install"
+E "上一頁"
 )
 
 CHOICE=$(dialog --clear \
@@ -51,6 +52,9 @@ case $CHOICE in
     # creating swap folder
     mkdir ~/.vim/swap
     bash ./app-vim.sh
+    ;;
+  E)
+    bash ./app-basic.sh
     ;;
 esac
 
