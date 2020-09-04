@@ -53,7 +53,6 @@ case $CHOICE in
     pressAnyKey
     bash ./app-apps.sh
     ;;
-
   E)
     bash ./app-apps.sh
     ;;

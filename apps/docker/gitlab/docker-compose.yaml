@@ -1,0 +1,17 @@
+web:
+  image: 'ulm0/gitlab'
+  restart: always
+  hostname: '192.168.170.107:7080'
+  environment:
+    GITLAB_OMNIBUS_CONFIG: |
+      external_url 'https://192.168.170.107:7080'
+      # Add any other gitlab.rb configuration here, each on its own line
+  ports:
+    - '7080:80'
+    - '7443:443'
+    - '7022:22'
+  volumes:
+    - '/srv/gitlab/config:/etc/gitlab'
+    - '/srv/gitlab/logs:/var/log/gitlab'
+    - '/srv/gitlab/data:/var/opt/gitlab'
+
