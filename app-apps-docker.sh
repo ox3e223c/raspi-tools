@@ -45,9 +45,9 @@ case $CHOICE in
       --publish 7443:443 --publish 7080:80 --publish 7022:22 \
       --name gitlab \
       --restart always \
-      --volume $GITLAB_HOME/config:/etc/gitlab \
-      --volume $GITLAB_HOME/logs:/var/log/gitlab \
-      --volume $GITLAB_HOME/data:/var/opt/gitlab \
+      --volume $HOME/Apps/gitlab/config:/etc/gitlab \
+      --volume $HOME/Apps/gitlab/logs:/var/log/gitlab \
+      --volume $HOME/Apps/gitlab/data:/var/opt/gitlab \
       ulm0/gitlab
 
     pressAnyKey
