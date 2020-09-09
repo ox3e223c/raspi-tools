@@ -8,6 +8,7 @@ OPTIONS=(
 D "Install Docker"
 P "Install Portainer ( Docker web ui )"
 G "Install gitlab ( git web ui )"
+O "Install OctoPrint"
 E "上一頁"
 )
 
@@ -28,7 +29,7 @@ case $CHOICE in
     sudo usermod -aG docker $USER
 
     pressAnyKey
-    bash ./app-apps.sh
+    bash ./app-apps-docker.sh
     ;;
   P)
     # install Portainer
@@ -36,7 +37,7 @@ case $CHOICE in
     docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
 
     pressAnyKey
-    bash ./app-apps.sh
+    bash ./app-apps-docker.sh
     ;;
   G)
     # install gitlab
@@ -51,7 +52,13 @@ case $CHOICE in
       ulm0/gitlab
 
     pressAnyKey
-    bash ./app-apps.sh
+    bash ./app-apps-docker.sh
+    ;;
+  O)
+    docker-compose -f './apps/docker/octoprint/docker-compose.yml' up -d
+
+    pressAnyKey
+    bash ./app-apps-docker.sh
     ;;
   E)
     bash ./app-apps.sh
